@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>signup</title>
+    <link rel="stylesheet" href="/styles3.css" />
+  </head>
+  <body>
+    <div id="input-values">
+      <form id="signup_form" action="register.php" method="POST">
+        <h3>Sign Up Here</h3>
+        <div id="input-field">
+          <input
+            type="text"
+            id="fnam"
+            name="fname"
+            placeholder="First Name"
+            required
+          /><br /><br />
+          <input
+            id="lnam"
+            type="text"
+            name="lname"
+            placeholder="Last Name"
+            required
+          /><br /><br />
+          <input
+            id="mob"
+            type="tel"
+            name="mobile"
+            placeholder="Mobile Number"
+            maxlength="10"
+            minlength="10"
+            required
+          />
+          <br /><br />
+          <input
+            id="pswd"
+            minlength="8"
+            type="password"
+            name="pwd"
+            placeholder="Password"
+            required
+          /><br /><br />
+
+          <input
+            id="rpwd"
+            minlength="8"
+            type="password"
+            name="confirm_pwd"
+            placeholder="Re Enter Password"
+            required
+          />
+          <br /><br />
+          <button id="submitBtn" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      var form = document.getElementById("signup_form");
+      var password = document.getElementById("pswd");
+      var confirmPassword = document.getElementById("rpwd");
+      var mobileNumber = document.getElementById("mob");
+      var submitButton = document.getElementById("submitBtn");
+      var firstName = document.getElementById("fnam");
+      var lastName = document.getElementById("lnam");
+      var pattern = /[6-9]\d{9}$/;
+      var namePattern = /[a-zA-z]/;
+
+      form.addEventListener("submit", function (event) {
+        firstName.value = firstName.value.trim();
+        lastName.value = lastName.value.trim();
+        mobileNumber.value = mobileNumber.value.trim();
+        if (password.value !== confirmPassword.value) {
+          alert("Password and Confirm Password do not match!");
+          confirmPassword.style.border = "2px solid red";
+          event.preventDefault();
+          submitButton.disabled = true;
+        }
+        if (!pattern.test(mobileNumber.value)) {
+          alert("Enter correct mobile number");
+          mobileNumber.style.border = "2px solid red";
+          event.preventDefault();
+          submitButton.disabled = true;
+        }
+        if (!namePattern.test(firstName.value)) {
+          mobileNumber.style.border = "2px solid red";
+          event.preventDefault();
+          submitButton.disabled = true;
+        }
+        if (!namePattern.test(lastName.value)) {
+          mobileNumber.style.border = "2px solid red";
+          event.preventDefault();
+          submitButton.disabled = true;
+        }
+      });
+
+      confirmPassword.addEventListener("input", function (event) {
+        submitButton.disabled = false;
+        confirmPassword.style.border = "2px solid green";
+      });
+      mobileNumber.addEventListener("input", function (event) {
+        submitButton.disabled = false;
+        mobileNumber.style.border = "2px solid green";
+      });
+      firstName.addEventListener("input", function (event) {
+        submitButton.disabled = false;
+        firstName.style.border = "2px solid green";
+      });
+      lastName.addEventListener("input", function (event) {
+        submitButton.disabled = false;
+        lastName.style.border = "2px solid green";
+      });
+    </script>
+  </body>
+</html>

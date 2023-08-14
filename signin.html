@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-image: url("https://lirp.cdn-website.com/fc0d4da7/dms3rep/multi/opt/venue+3-1056w.jpg");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+
+      .login-card {
+        max-width: 400px;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #d3cbcbe6;
+        backdrop-filter: blur(10px);
+      }
+
+      .login-card h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .login-card .form-group {
+        margin-bottom: 20px;
+      }
+
+      .login-card label {
+        display: block;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .login-card input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .login-card button {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        background-color: #f9ca4d;
+        border: none;
+        border-radius: 5px;
+        color: #333;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-card button:hover {
+        background-color: #f7be1c;
+      }
+
+      .login-card a {
+        display: block;
+        text-align: center;
+        color: royalblue;
+        text-decoration: none;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-card">
+      <form id="loginForm" action="./signin.php" method="POST">
+        <h1>Login</h1>
+        <div class="form-group">
+          <label for="mob">Mobile Number</label>
+          <input
+            type="tel"
+            name="userMobile"
+            id="mob"
+            class="form-control"
+            placeholder="Mobile Number"
+            maxlength="10"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="pwd">Password</label>
+          <input
+            type="password"
+            name="userPassword"
+            id="pwd"
+            class="form-control"
+            placeholder="Password"
+            minlength="8"
+            required
+          />
+        </div>
+
+        <button type="submit">Submit</button>
+        <a href="changepassword.html">Forgot Password?</a>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+.food-section:hover {
+  box-shadow: 0 4px 8px rgba(126, 216, 238, 0.1);
+  transform: translateY(-10px);
+}
+.food {
+  border: none;
+  transform: translatey(10px);
+}

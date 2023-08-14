@@ -1,0 +1,208 @@
+body {
+  position: fixed;
+  background-color: lightgreen;
+}
+
+#div-1 {
+  background-color: linen;
+  text-align: center;
+  padding: 10px;
+  max-width: 420px;
+}
+
+h4 {
+  color: orange;
+  margin: 0;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: hsla(220, 31%, 89%, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: red;
+  font-size: 18px;
+}
+
+form label span {
+  color: red;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 16px;
+  background-color: hsla(220, 31%, 89%, 0.75);
+  color: green;
+  resize: none;
+  overflow: hidden;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-bottom-color: red;
+  color: red;
+}
+
+form button {
+  cursor: pointer;
+  background-color: orange;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  transition: background-color 0.2s;
+  margin: 10px;
+}
+
+form button:hover {
+  background-color: darkorange;
+}
+
+form input:hover,
+form textarea:hover {
+  background-color: rgba(220, 220, 220, 0.8);
+}
+@media (max-width: 400px) {
+  body {
+    position: relative;
+  }
+  form {
+    margin-left: 10px;
+    font-size: large;
+  }
+  #div-1 {
+    margin-left: 10px;
+    font-size: large;
+  }
+  button {
+    display: flex;
+    position: relative;
+    margin-left: 2px;
+  }
+}
+@media (min-width: 401px) and (max-width: 500px) {
+  body {
+    position: relative;
+  }
+  form {
+    margin-left: 50px;
+    font-size: x-large;
+  }
+  #div-1 {
+    margin-left: 50px;
+    font-size: x-large;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
+  body {
+    position: relative;
+  }
+  form {
+    margin-left: 100px;
+    font-size: x-large;
+  }
+  #div-1 {
+    margin-left: 100px;
+    font-size: x-large;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 750px) {
+  body {
+    position: relative;
+  }
+  form {
+    margin-left: 200px;
+    font-size: x-large;
+  }
+  #div-1 {
+    margin-left: 200px;
+    font-size: x-large;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1150px) {
+  body {
+    position: relative;
+  }
+  form {
+    margin-left: 300px;
+    font-size: xx-large;
+    overflow: hidden;
+  }
+  #div-1 {
+    font-size: x-large;
+    margin-left: 300px;
+  }
+}
+
+@media (min-width: 1151px) and (max-width: 1400px) {
+  body {
+    position: relative;
+  }
+  form {
+    margin-left: 500px;
+    font-size: xx-large;
+    padding: 10px 50px 20px 50px;
+  }
+  #div-1 {
+    margin-left: 500px;
+    font-size: xx-large;
+    padding-left: 70px;
+  }
+}
+@media (min-width: 1401px) and (max-width: 2000px) {
+  body {
+    position: relative;
+  }
+  form {
+    margin-left: 500px;
+    font-size: xx-large;
+    padding-right: 200px;
+    align-items: center;
+  }
+
+  #div-1 {
+    margin-left: 500px;
+    font-size: xx-large;
+    padding-right: 200px;
+  }
+  form input,
+  form textarea {
+    margin-bottom: 30px;
+    padding: 30px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: xx-large;
+    background-color: hsla(220, 31%, 89%, 0.75);
+    color: green;
+    resize: none;
+    overflow: hidden;
+  }
+
+  form input:focus,
+  form textarea:focus {
+    outline: none;
+    border-bottom-color: red;
+    color: red;
+  }
+  label {
+    font-weight: x-large;
+  }
+}

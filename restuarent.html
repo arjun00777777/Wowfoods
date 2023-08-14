@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Recipe Details Form</title>
+    <link rel="stylesheet" href="/styles2.css" />
+  </head>
+  <body>
+    <div id="div-1">
+      <h4>Recipe Details Form</h4>
+      <br />
+      <h4>Fill The Below Details</h4>
+    </div>
+    <form id="recipe-form" method="POST" action="./submittedrestuarents.php">
+      <label for="input-recipe-name"><span>*</span>Enter Recipe Name</label>
+      <input
+        id="input-recipe-name"
+        name="ta-1"
+        placeholder="Recipe Name"
+        required
+      />
+      <br />
+      <br />
+      <label for="textarea-ingredients"
+        ><span>*</span>Enter The Ingredients</label
+      >
+      <textarea
+        id="textarea-ingredients"
+        name="ta-2"
+        rows="4"
+        cols="30"
+        placeholder="Ingredients..."
+        required
+      ></textarea>
+      <br />
+      <label for="textarea-instructions"
+        ><span>*</span>Enter Instructions</label
+      >
+      <textarea
+        id="textarea-instructions"
+        name="ta-3"
+        rows="4"
+        cols="30"
+        placeholder="Instructions..."
+        required
+      ></textarea>
+      <br />
+      <input
+        id="input_image"
+        type="file"
+        accept="image/png,image/jpeg"
+        name="image"
+      />
+      <br />
+      <br />
+      <button id="submitRecipe">Submit Recipe</button>
+      <button type="submit" id="recipeAdd">Add Recipe</button>
+    </form>
+    <script>
+      var x = document.getElementById("recipeAdd");
+      x.addEventListener("click", function() {
+        event.preventDefault();
+        window.location.href = "./restuarent.html";
+      });
+  </script>
+  </body>
+</html>
